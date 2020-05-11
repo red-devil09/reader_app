@@ -1,0 +1,38 @@
+/*index.css*/
+/*add background picture to page1*/
+#page1{
+    background: url(https://images.unsplash.com/photo-1533035353720-f1c6a75cd8ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60);
+    background-position: center center;
+    /*ye image ko centre kr dia*/
+    background-attachment: fixed;/*scroll krne se hilegi nhi ab*/
+    background-size: 100% 100%;/*ye syntax jb image background mei chipkane ke liye achi tarah se*/
+    color: #2f3640;
+    text-align: center;/*isse apna sara text centre ho jaega*/
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+/*error message*/
+#error{
+    color: #130f40;
+    width: 50%;/*screen ki half width dedi*/
+    margin: 20px auto;/*margin dia isko centre krne ke liye*/
+    font-size: 25px;
+}
+
+/*read word*/
+/*jo word pdha ja rha hai*/
+#result{
+    font-size: 60px;
+    background-color: rgba(255, 255, 255, 0.2);/*iss wale tareke se opacity handle kr lete hai hum*/
+    padding: 5% 0;
+}
+
+/* Hide the number input  ye jo slider ke sath ek number chlta hai usko hide kia hai..and syntax humne website se hi copy kia hai*/
+.full-width-slider input {
+    display: none !important;
+}
+
+/*jitne bhi sliders hai vo apne container ki full width lenge abhi*/
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}

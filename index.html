@@ -1,0 +1,121 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Speed Reader App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="readertheme.min.css" />
+<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+			
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Page1-->
+    <div data-role="page" id="page1" data-theme="a">
+        <div data-role="header">
+        </div>
+
+        <div role="main" class="ui-content">
+            <!--title-->
+            <div class="header">
+                <h1><strong>Speed Reader App</strong></h1>
+                <h2>For an efficient reading experience.</h2>
+            </div>
+
+            <div id="controls">
+                <!--ye jo div bnaya hai ye saare controls ke liye jb kli event hoga tb trigger hoga-->
+
+
+                <!--Font-size and speed-->
+                <!--jo humare do chote sliders ke upar text hai..vo choti screen mei sahi se beahve kre iske liye yaha bhi grid system lga dia-->
+                <!--yaha screen ko do peices mei kr dia-->
+                <div class="ui-grid-a">
+                    <!--do div le liye ek spped ke liye and ek font size wale option ke liye-->
+                    <div class="ui-block-a">
+                        <div>
+                            <!--span ke andr isliye taaki baad mei change krde-->
+                            <h3>FONT SIZE: <span id="fontsize">50</span> px.</h3>
+                        </div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div>
+                            <h3><span id="speed">300</span> WORDS PER MINUTE.</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Font-size and speed-->
+
+                <div class="ui-grid-a">
+                    <!--ye yaha pe slider ka code jquerymobile ki sitee se utha ke daal dia...aur vahi se hume iske css eleemnt ka bhi pta chlega-->
+                    <div class="ui-block-a">
+                        <!--yaha humne uska label hta ke apna label lga dia..jo hume print krana tha-->
+                        <form class="full-width-slider">
+                            <input type="range" name="fontsizeslider" id="fontsizeslider" min="20" max="100" value="50" step="5" data-highlight="true">
+                            <!--isko true krne se peeche blue color sa rha hai-->
+                            <!--ye value ke andr default value hai-->
+                            <!--step = 5 yani either +-5-->
+                        </form>
+                    </div>
+                    <div class="ui-block-b">
+                        <form class="full-width-slider">
+                            <input type="range" name="speedslider" id="speedslider" min="50" max="600" value="300" step="50" data-highlight="true">
+                        </form>
+                    </div>
+                </div>
+
+                <!--Progress-->
+                <form class="full-width-slider">
+                    <label for="progressslider">
+                        <h3>PROGRESS: <span id="percentage">0</span>%</h3>
+                    </label>
+                    <input type="range" name="progressslider" id="progressslider" min="0" max="100" value="0" data-highlight="true">
+                </form>
+            </div>
+
+            <!--the read word-->
+            <!--ye vo word hai jo pdha ja rha hai abhi-->
+            <div id="result">word</div>
+
+            <!--error message-->
+            <!--jb input mei kch nhi hoga to ye error dikhao-->
+            <div id="error">
+                <h3>
+                    No Text To read
+                </h3>
+            </div>
+
+
+
+            <!--ye jitne bhi input wale element hai vo humne yaha lga diye-->
+            <!--User Inputs-->
+            <div id="inputs">
+                <!--text input-->
+                <textarea id="userInput"></textarea>
+                <!--buttons-->
+                <button id="start">Start Reading</button>
+                <button id="new">New</button>
+                <button id="pause">Pause</button>
+                <button id="resume">Resume</button>
+            </div>
+
+        </div>
+
+    </div>
+    <!--Page1-->
+
+    <script src="index.js">
+
+    </script>
+</body>
+
+</html>
